@@ -1,0 +1,11 @@
+create table musician (SSN number(5) primary key, name varchar(50), address varchar(100), phone varchar(10), instruments varchar(20), foreign key (instruments) references inst(name   ));
+create table inst (name varchar(30) primary key, note varchar(20));
+create table album (title varchar(30), producer varchar(50), copyright date, format varchar(20), identify varchar(20), primary key( title, producer ));
+create table song (title varchar(50) primary key, author varchar(50));
+insert into musician values (100, 'Max', 'Queens', 9898989890, 'Piano');
+insert into musician values (101, 'Lana', 'Brooklyn', 5678901234, 'Guitar');
+insert into inst values ('Guitar', 'a');
+insert into inst values ('Violin', 'c');
+insert into inst values ('Piano', 'a');
+insert into inst values ('Trumpet','f');
+insert into inst values ('Bass','b');
